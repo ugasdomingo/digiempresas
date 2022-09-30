@@ -1,0 +1,72 @@
+@keyframes float {
+	from {
+		top: 15vh;
+	}
+	to {
+		top: 25vh;
+	}
+}
+
+@keyframes float-responsive {
+	from {
+		bottom: 24px;
+	}
+	to {
+		bottom: 8px;
+	}
+}
+
+.navbar {
+	display: grid;
+	position: fixed;
+	top: 15vh;
+	right: 16px;
+	animation-name: float;
+	animation-duration: 3s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.unActive {
+	text-decoration: none;
+	color: white;
+	padding: 8px;
+	background-color: var(--orange-color);
+	margin: 12px;
+	border-radius: 8px;
+	text-align: center;
+	font-family: "Neoteric";
+}
+
+.active {
+	text-decoration: none;
+	color: white;
+	padding: 8px;
+	background-color: var(--primary-color);
+	margin: 12px;
+	border: 2px Solid;
+	border-color: var(--orange-color);
+	border-radius: 8px;
+	text-align: center;
+	font-family: "Neoteric";
+}
+
+@media only screen and (max-width: 600px) {
+	.navbar {
+		right: auto;
+		top: auto;
+		display: flex;
+		justify-content: space-evenly;
+		width: 100%;
+		bottom: 28px;
+		animation-name: float-responsive;
+	}
+	.active {
+		margin: 0px;
+		font-size: 12px;
+	}
+	.unActive {
+		margin: 0px;
+		font-size: 12px;
+	}
+}

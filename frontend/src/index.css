@@ -1,0 +1,24 @@
+/* Variables */
+body {
+	/* Colores */
+	--primary-color: #1d227b;
+	--secondary-color: #2b5da4;
+	--orange-color: #fa8c24;
+	--orangeRed-color: #fc4c1c;
+	--gray-color: #514f4d;
+	--ligthBlue-color: #48a5cc;
+	/* Fuentes */
+	@font-face {
+		font-family: "Neoteric";
+		src: url("./assets/NEOTERICc - Bold DEMO VERSION.ttf")
+			format("truetype");
+		font-weight: normal;
+		font-style: normal;
+	}
+}
+
+/* Styles */
+body {
+	margin: 0px;
+	background-color: var(--primary-color);
+}
