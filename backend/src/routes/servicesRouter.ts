@@ -19,7 +19,7 @@ import {
 const servicesRouter = Router();
 
 //Routes
-servicesRouter.get("/", allServices);
+servicesRouter.get("/category/:category", allServices);
 
 servicesRouter.get("/:id", oneService);
 

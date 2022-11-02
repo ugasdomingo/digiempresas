@@ -12,7 +12,7 @@ import Services from "../models/Services";
 // Get all Services Controller
 export const allServices = async (req: any, res: any) => {
 	try {
-		const services = await Services.find().lean();
+		const services = await Services.find({ category: req.params.category });
 		return res.json({ services });
 	} catch (error: any) {
 		return res.status(500).json({ message: error.message });
