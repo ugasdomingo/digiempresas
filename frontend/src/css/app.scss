@@ -1,0 +1,11 @@
+// app global css in SCSS form
+
+@font-face {
+    font-family: neoteric;
+    src: url(/fonts/NEOTERIC.ttf);
+  }
+  
+  // declare a class which applies it
+  .neoteric {
+    font-family: 'neoteric';
+  }
