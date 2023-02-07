@@ -22,6 +22,10 @@ const navBarStore = useNavBarStore();
 </script>
 
 <style scoped lang="scss">
+h2 {
+    animation-duration: 3s;
+    animation-name: slidein;
+}
 .hero-img-big {
     width: 100%;
     height: 100%;
@@ -37,6 +41,17 @@ const navBarStore = useNavBarStore();
 }
 .hero-container div p {
     font-size: 20px;
+}
+
+@keyframes slidein {
+    from {
+        margin-bottom: 100%;
+        width: 300%;
+    }
+    to {
+        margin-bottom: 0%;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 720px) {

@@ -4,29 +4,78 @@
     >
         <img src="images/Hero-grande.jpg" alt="Hero" class="hero-img-big" />
         <img src="images/Hero-pequeño.jpg" alt="Hero" class="hero-img-small" />
-        <q-btn
-            label="Marketing Digital"
-            glossy
-            class="services-buttom bg-accent"
-        ></q-btn>
-        <q-btn
-            label="Páginas y Aplicaciones Web"
-            glossy
-            class="services-buttom bg-accent"
-        ></q-btn>
-        <q-btn
-            label="Gestion de Ads"
-            glossy
-            class="services-buttom bg-accent"
-        ></q-btn>
+        <div class="row flex-center individual-container">
+            <img
+                src="images/social-media-small.png"
+                alt="marketing"
+                style="width: 150px"
+            />
+            <q-btn
+                label="Marketing Digital"
+                glossy
+                class="services-buttom bg-accent q-ml-md"
+                @click="marketing = !marketing"
+            >
+                <q-dialog v-model="marketing">
+                    <MarketingComponent />
+                </q-dialog>
+            </q-btn>
+        </div>
+        <div class="row flex-center individual-container">
+            <img
+                src="images/web-sites-small.png"
+                alt="web-sites"
+                style="width: 150px"
+            />
+            <q-btn
+                label="Páginas y Aplicaciones Web"
+                glossy
+                class="services-buttom bg-accent q-ml-md"
+                @click="webs = !webs"
+            >
+                <q-dialog v-model="webs">
+                    <WebsComponent />
+                </q-dialog>
+            </q-btn>
+        </div>
+        <div class="row flex-center individual-container">
+            <img
+                src="images/advissor-small.png"
+                alt="web-sites"
+                style="width: 150px"
+            />
+            <q-btn
+                label="Asesoría Gratuita Marketing y Tecnología"
+                glossy
+                class="services-buttom bg-accent q-ml-md"
+                @click="advissor = !advissor"
+            >
+                <q-dialog v-model="advissor">
+                    <AdvissorComponent />
+                </q-dialog>
+            </q-btn>
+        </div>
     </q-page>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from 'vue';
+import MarketingComponent from './services/MarketingComponent.vue';
+import WebsComponent from './services/WebsComponent.vue';
+import AdvissorComponent from './services/AdvissorComponent.vue';
+
+const marketing = ref(false);
+const webs = ref(false);
+const advissor = ref(false);
+</script>
 
 <style scoped lang="scss">
+.individual-container {
+    width: 70%;
+}
 .services-container {
     background-color: rgba(35, 59, 152, 0.7);
+    width: 100%;
 }
 .services-buttom {
     width: 50%;
@@ -35,6 +84,8 @@
     background-color: rgba($color: #fb851b, $alpha: 0.8);
     border-radius: 8px;
     font-size: 20px;
+    animation-duration: 1s;
+    animation-name: slidein;
 }
 .hero-img-big {
     width: 100%;
@@ -45,6 +96,15 @@
 }
 .hero-img-small {
     display: none;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 3%;
+    }
+    to {
+        margin-left: 0%;
+    }
 }
 
 @media screen and (max-width: 720px) {

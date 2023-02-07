@@ -16,7 +16,8 @@
             class="buttom-navbar"
         />
         <q-route-tab
-            @click="handleClick('quotes')"
+            target="blank"
+            href="https://wa.me/34604822385"
             label="Solicitar Presupuesto"
             class="bg-accent buttom-navbar"
         />
