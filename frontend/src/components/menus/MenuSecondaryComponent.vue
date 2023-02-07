@@ -17,7 +17,8 @@
         ></q-btn>
         <q-btn
             label="Presupuesto"
-            @click="handleClick('quotes')"
+            target="blank"
+            href="https://wa.me/34604822385"
             class="bg-accent buttom-navbar"
         ></q-btn>
     </div>
@@ -42,11 +43,6 @@ const handleClick = (page: string) => {
     margin: 0px;
 }
 @media screen and (max-width: 500px) {
-    .buttom-navbar {
-        font-size: 12px;
-    }
-}
-@media screen and (max-width: 380px) {
     .buttom-navbar {
         font-size: 10px;
     }
