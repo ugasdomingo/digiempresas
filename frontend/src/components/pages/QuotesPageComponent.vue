@@ -1,3 +1,20 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+
+const firstName = ref('');
+const email = ref('');
+const sizeCompany = ref('');
+const services = ref([]);
+
+const options = [
+    '1 - 5 personas',
+    '6 - 10 personas',
+    '11 - 25 personas',
+    '26 - 50 personas',
+    '+50 personas',
+];
+</script>
+
 <template>
     <q-page class="column text-white flex-center gradiant">
         <div class="column flex-center web-container">
@@ -41,23 +58,6 @@
         </div>
     </q-page>
 </template>
-
-<script setup lang="ts">
-import { ref } from 'vue';
-
-const firstName = ref('');
-const email = ref('');
-const sizeCompany = ref('');
-const services = ref([]);
-
-const options = [
-    '1 - 5 personas',
-    '6 - 10 personas',
-    '11 - 25 personas',
-    '26 - 50 personas',
-    '+50 personas',
-];
-</script>
 
 <style lang="scss" scoped>
 img {

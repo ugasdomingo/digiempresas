@@ -1,20 +1,10 @@
+<script setup lang="ts"></script>
+
 <template>
     <q-tabs align="right" class="neoteric" style="font-size: 48px">
-        <q-route-tab
-            @click="handleClick('services')"
-            label="Servicios"
-            class="buttom-navbar"
-        />
-        <q-route-tab
-            @click="handleClick('portfolio')"
-            label="Portafolio"
-            class="buttom-navbar"
-        />
-        <q-route-tab
-            @click="handleClick('courses')"
-            label="Cursos"
-            class="buttom-navbar"
-        />
+        <q-route-tab to="servicios" label="Servicios" class="buttom-navbar" />
+        <q-route-tab to="portafolio" label="Portafolio" class="buttom-navbar" />
+        <q-route-tab to="cursos" label="Cursos" class="buttom-navbar" />
         <q-route-tab
             target="blank"
             href="https://wa.me/34604822385"
@@ -23,16 +13,6 @@
         />
     </q-tabs>
 </template>
-
-<script setup lang="ts">
-import { useNavBarStore } from 'src/stores/navBar-store';
-
-const navBarStore = useNavBarStore();
-
-const handleClick = (page: string) => {
-    navBarStore.navigation(page);
-};
-</script>
 
 <style lang="scss" scoped>
 .buttom-navbar {

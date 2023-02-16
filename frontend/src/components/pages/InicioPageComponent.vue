@@ -1,3 +1,5 @@
+<script setup lang="ts"></script>
+
 <template>
     <q-page class="column flex-center hero-container">
         <img src="images/Hero-grande.jpg" alt="Hero" class="hero-img-big" />
@@ -14,12 +16,6 @@
         </div>
     </q-page>
 </template>
-
-<script setup lang="ts">
-import { useNavBarStore } from 'src/stores/navBar-store';
-
-const navBarStore = useNavBarStore();
-</script>
 
 <style scoped lang="scss">
 h2 {

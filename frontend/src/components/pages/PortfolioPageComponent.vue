@@ -1,3 +1,5 @@
+<script setup lang="ts"></script>
+
 <template>
     <q-page class="column neoteric text-white justify-evenly gradiant">
         <div class="row justify-evenly web-container">
@@ -18,8 +20,6 @@
         </div>
     </q-page>
 </template>
-
-<script setup lang="ts"></script>
 
 <style lang="scss" scoped>
 img {

@@ -1,20 +1,10 @@
+<script setup lang="ts"></script>
+
 <template>
     <div class="row text-white col-12 justify-evenly menu2-container">
-        <q-btn
-            label="Servicios"
-            @click="handleClick('services')"
-            class="buttom-navbar"
-        ></q-btn>
-        <q-btn
-            label="Portafolio"
-            @click="handleClick('portfolio')"
-            class="buttom-navbar"
-        ></q-btn>
-        <q-btn
-            label="Cursos"
-            @click="handleClick('courses')"
-            class="buttom-navbar"
-        ></q-btn>
+        <q-btn label="Servicios" to="servicios" class="buttom-navbar"></q-btn>
+        <q-btn label="Portafolio" to="portafolio" class="buttom-navbar"></q-btn>
+        <q-btn label="Cursos" to="cursos" class="buttom-navbar"></q-btn>
         <q-btn
             label="Presupuesto"
             target="blank"
@@ -23,16 +13,6 @@
         ></q-btn>
     </div>
 </template>
-
-<script setup lang="ts">
-import { useNavBarStore } from 'src/stores/navBar-store';
-
-const navBarStore = useNavBarStore();
-
-const handleClick = (page: string) => {
-    navBarStore.navigation(page);
-};
-</script>
 
 <style lang="scss" scoped>
 .menu2-container {

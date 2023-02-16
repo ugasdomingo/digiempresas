@@ -1,3 +1,5 @@
+<script setup lang="ts"></script>
+
 <template>
     <div class="gradiant">
         <div class="column flex-center q-mb-md">
@@ -46,8 +48,6 @@
         </div>
     </div>
 </template>
-
-<script setup lang="ts"></script>
 
 <style lang="scss" scoped>
 .card-containers {

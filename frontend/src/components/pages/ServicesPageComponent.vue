@@ -1,3 +1,14 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+import MarketingComponent from '../services/MarketingComponent.vue';
+import WebsComponent from '../services/WebsComponent.vue';
+import AdvissorComponent from '../services/AdvissorComponent.vue';
+
+const marketing = ref(false);
+const webs = ref(false);
+const advissor = ref(false);
+</script>
+
 <template>
     <q-page
         class="column items-center neoteric text-center justify-evenly services-container"
@@ -57,17 +68,6 @@
         </div>
     </q-page>
 </template>
-
-<script setup lang="ts">
-import { ref } from 'vue';
-import MarketingComponent from './services/MarketingComponent.vue';
-import WebsComponent from './services/WebsComponent.vue';
-import AdvissorComponent from './services/AdvissorComponent.vue';
-
-const marketing = ref(false);
-const webs = ref(false);
-const advissor = ref(false);
-</script>
 
 <style scoped lang="scss">
 .individual-container {

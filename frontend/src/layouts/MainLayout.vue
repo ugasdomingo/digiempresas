@@ -22,6 +22,15 @@
 
         <q-page-container>
             <router-view />
+            <q-page-sticky position="bottom-right" :offset="[18, 18]">
+                <q-btn
+                    fab
+                    icon="whatsapp"
+                    color="green"
+                    target="Blank"
+                    href="https://wa.me/34604822385"
+                />
+            </q-page-sticky>
         </q-page-container>
     </q-layout>
 </template>
