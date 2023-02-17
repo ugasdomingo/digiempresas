@@ -41,6 +41,12 @@ import AdsProPaypalComponent from '../AdsProPaypalComponent.vue';
                             euros. Puedes pagar la clase hasta 1 hora antes de
                             empezar.
                         </p>
+                        <p>
+                            Al terminar las clases tendremos 2 sesiones más de
+                            prácticas para quienes deseen probar Ads para sus
+                            negocios o clientes. También una sesión en privado
+                            para aclarar dudas o recibir asesoría personalizada
+                        </p>
                     </q-card-section>
                     <q-separator inset />
                     <q-card-section>
@@ -52,7 +58,7 @@ import AdsProPaypalComponent from '../AdsProPaypalComponent.vue';
                             </span>
 
                             <br />
-                            Duración: <span>2 Semanas</span>
+                            Duración: <span>5 Semanas</span>
                             <br />
                             Inversión: <span>250 euros</span>
                             <br />
