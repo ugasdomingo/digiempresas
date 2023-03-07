@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import AdsProPaypalComponent from '../AdsProPaypalComponent.vue';
+import AdsProPaypalComponent from '../payments/AdsProPaypalComponent.vue';
 </script>
 
 <template>
-    <q-page class="column neoteric text-white justify-evenly gradiant">
-        <h3 class="q-pb-md q-mb-none text-center">Próximas formaciones:</h3>
+    <q-page class="column neoteric text-white justify-evenly">
+        <h3 class="q-pb-md q-my-none text-center">Próximas formaciones:</h3>
         <div class="row items-center justify-evenly web-container">
             <h5 class="q-pb-md q-mb-none">Marzo:</h5>
             <router-link to="ads-profesional">

@@ -1,6 +1,8 @@
 <template>
-    <q-layout view="hhh lpR fFf">
-        <q-header elevated>
+    <q-layout view="hhh lpR fFf" class="hero-container">
+        <img src="images/Hero-grande.jpg" alt="Hero" class="hero-img-big" />
+        <img src="images/Hero-pequeño.jpg" alt="Hero" class="hero-img-small" />
+        <q-header class="transparent">
             <q-toolbar>
                 <q-toolbar-title>
                     <router-link
@@ -25,7 +27,7 @@
             <q-page-sticky position="bottom-right" :offset="[18, 18]">
                 <q-btn
                     fab
-                    icon="whatsapp"
+                    icon="mdi-whatsapp"
                     color="green"
                     target="Blank"
                     href="https://wa.me/34604822385"
@@ -51,7 +53,31 @@ const handleClick = (page: string) => {
 .menu-secondary {
     display: none;
 }
+.hero-container {
+    background: rgba(35, 59, 152, 0.7);
+}
+.hero-img-big {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -100;
+}
+.hero-img-small {
+    display: none;
+}
 @media screen and (max-width: 1080px) {
+    .hero-img-big {
+        display: none;
+    }
+    .hero-img-small {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: fixed;
+        z-index: -1;
+    }
     .digiempresas {
         font-size: 36px;
     }

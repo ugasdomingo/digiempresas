@@ -13,8 +13,6 @@ const advissor = ref(false);
     <q-page
         class="column items-center neoteric text-center justify-evenly services-container"
     >
-        <img src="images/Hero-grande.jpg" alt="Hero" class="hero-img-big" />
-        <img src="images/Hero-pequeño.jpg" alt="Hero" class="hero-img-small" />
         <div class="row flex-center individual-container">
             <img
                 src="images/social-media-small.png"
@@ -74,7 +72,6 @@ const advissor = ref(false);
     width: 70%;
 }
 .services-container {
-    background-color: rgba(35, 59, 152, 0.7);
     width: 100%;
 }
 .services-buttom {
@@ -86,16 +83,6 @@ const advissor = ref(false);
     font-size: 20px;
     animation-duration: 1s;
     animation-name: slidein;
-}
-.hero-img-big {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: fixed;
-    z-index: -1;
-}
-.hero-img-small {
-    display: none;
 }
 
 @keyframes slidein {

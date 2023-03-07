@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AdsProPaypalComponent from '../AdsProPaypalComponent.vue';
+import AdsProPaypalComponent from '../payments/AdsProPaypalComponent.vue';
 </script>
 
 <template>
@@ -62,7 +62,7 @@ import AdsProPaypalComponent from '../AdsProPaypalComponent.vue';
                             <br />
                             Inversión: <span>250 euros</span>
                             <br />
-                            Comienza: <span>11 de Marzo 2023</span>
+                            Comienza: <span>20 de Abril 2023</span>
                             <br />
                             Cupos disponibles: <span>10 personas</span>
                         </p>

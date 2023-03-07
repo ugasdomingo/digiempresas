@@ -1,12 +1,13 @@
 <script setup lang="ts"></script>
 
 <template>
-    <q-page class="column neoteric text-white justify-evenly gradiant">
+    <q-page class="column neoteric text-white justify-evenly">
         <div class="row justify-evenly web-container">
             <h5>Últimas aplicaciones:</h5>
             <div class="row justify-evenly">
                 <img src="images/lucia-website.png" alt="app1" />
                 <img src="images/mineteados-website.png" alt="app2" />
+                <img src="images/theo-website.png" alt="app3" />
             </div>
         </div>
         <div class="row items-center justify-evenly web-container">
@@ -37,7 +38,7 @@ img {
 @keyframes slidein {
     from {
         margin-left: 100%;
-        width: 300%;
+        width: 100%;
     }
     to {
         margin-left: 0%;

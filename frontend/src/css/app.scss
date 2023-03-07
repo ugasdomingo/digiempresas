@@ -13,3 +13,10 @@
 .gradiant {
     background: linear-gradient(to top, #1583ba, #233b98);
 }
+.text-shadow {
+  text-shadow: 2px 2px 50px #fff;
+}
+.box-shadow {
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #1976d2,
+    0 0 0.8rem #1976d2, 0 0 2.8rem #1976d2, inset 0 0 1.3rem #1976d2;
+}
