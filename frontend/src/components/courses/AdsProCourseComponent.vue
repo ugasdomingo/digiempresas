@@ -62,9 +62,9 @@ import AdsProPaypalComponent from '../payments/AdsProPaypalComponent.vue';
                             <br />
                             Inversión: <span>250 euros</span>
                             <br />
-                            Comienza: <span>20 de Abril 2023</span>
+                            Comienza: <span>03 de Junio 2023</span>
                             <br />
-                            Cupos disponibles: <span>10 personas</span>
+                            Cupos disponibles: <span>20 personas</span>
                         </p>
                     </q-card-section>
                 </q-card>

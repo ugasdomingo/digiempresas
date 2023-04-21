@@ -1,25 +1,35 @@
 <template>
     <q-layout view="hhh lpR fFf" class="hero-container">
-        <img src="images/Hero-grande.jpg" alt="Hero" class="hero-img-big" />
-        <img src="images/Hero-pequeño.jpg" alt="Hero" class="hero-img-small" />
         <q-header class="transparent">
             <q-toolbar>
                 <q-toolbar-title>
                     <router-link
                         to="/"
-                        @click="handleClick('inicio')"
-                        class="neoteric text-h3 text-white digiempresas"
+                        class="neoteric text-h3 text-white digiempresas text-shadow"
                         style="text-decoration: none"
                     >
-                        <q-avatar rounded size="100px" font-size="82px">
+                        <q-avatar
+                            rounded
+                            size="100px"
+                            font-size="82px"
+                            class="logo"
+                        >
                             <img src="/icons/logo-imagen.png" alt="Logo" />
                         </q-avatar>
                         Digiempresas
                     </router-link>
                 </q-toolbar-title>
                 <MenuPrincipalComponent class="menu-principal" />
+                <q-icon name="menu" class="hamburguer-menu">
+                    <q-popup-proxy
+                        transition-show="flip-up"
+                        transition-hide="flip-down"
+                        :breakpoint="50"
+                    >
+                        <MenuPrincipalComponent />
+                    </q-popup-proxy>
+                </q-icon>
             </q-toolbar>
-            <MenuSecondaryComponent class="menu-secondary" />
         </q-header>
 
         <q-page-container>
@@ -38,55 +48,31 @@
 </template>
 
 <script setup lang="ts">
-import MenuPrincipalComponent from 'src/components/menus/MenuPrincipalComponent.vue';
-import MenuSecondaryComponent from 'src/components/menus/MenuSecondaryComponent.vue';
-import { useNavBarStore } from 'src/stores/navBar-store';
-
-const navBarStore = useNavBarStore();
-
-const handleClick = (page: string) => {
-    navBarStore.navigation(page);
-};
+import MenuPrincipalComponent from 'src/components/layoutsComponents/MenuPrincipalComponent.vue';
 </script>
 
 <style lang="scss" scoped>
-.menu-secondary {
-    display: none;
-}
 .hero-container {
-    background: rgba(35, 59, 152, 0.7);
-}
-.hero-img-big {
+    background: rgba(35, 59, 152, 0);
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: fixed;
-    z-index: -100;
+    height: 100px;
 }
-.hero-img-small {
+.hamburguer-menu {
     display: none;
 }
+
 @media screen and (max-width: 1080px) {
-    .hero-img-big {
-        display: none;
-    }
-    .hero-img-small {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: fixed;
-        z-index: -1;
-    }
     .digiempresas {
         font-size: 36px;
+    }
+    .logo {
+        display: none;
     }
     .menu-principal {
         display: none;
     }
-    .menu-secondary {
-        display: flex;
-        width: 100%;
+    .hamburguer-menu {
+        display: inline;
     }
 }
 </style>

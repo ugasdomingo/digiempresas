@@ -10,19 +10,14 @@ const advissor = ref(false);
 </script>
 
 <template>
-    <q-page
-        class="column items-center neoteric text-center justify-evenly services-container"
-    >
-        <div class="row flex-center individual-container">
-            <img
-                src="images/social-media-small.png"
-                alt="marketing"
-                style="width: 150px"
-            />
+    <q-page class="neoteric services-container">
+        <img src="images/fondo-2.jpg" alt="Hero" class="hero-img-big" />
+
+        <div class="individual-container">
+            <img src="images/services-rrss.png" alt="marketing" />
             <q-btn
                 label="Marketing Digital"
-                glossy
-                class="services-buttom bg-accent q-ml-md"
+                class="services-buttom"
                 @click="marketing = !marketing"
             >
                 <q-dialog v-model="marketing">
@@ -30,16 +25,12 @@ const advissor = ref(false);
                 </q-dialog>
             </q-btn>
         </div>
-        <div class="row flex-center individual-container">
-            <img
-                src="images/web-sites-small.png"
-                alt="web-sites"
-                style="width: 150px"
-            />
+
+        <div class="individual-container">
+            <img src="images/services-web.png" alt="web-sites" />
             <q-btn
                 label="Páginas y Aplicaciones Web"
-                glossy
-                class="services-buttom bg-accent q-ml-md"
+                class="services-buttom"
                 @click="webs = !webs"
             >
                 <q-dialog v-model="webs">
@@ -47,16 +38,12 @@ const advissor = ref(false);
                 </q-dialog>
             </q-btn>
         </div>
-        <div class="row flex-center individual-container">
-            <img
-                src="images/advissor-small.png"
-                alt="web-sites"
-                style="width: 150px"
-            />
+
+        <div class="individual-container">
+            <img src="images/services-ads.png" alt="web-sites" />
             <q-btn
-                label="Asesoría Gratuita Marketing y Tecnología"
-                glossy
-                class="services-buttom bg-accent q-ml-md"
+                label="Social y Google Ads"
+                class="services-buttom"
                 @click="advissor = !advissor"
             >
                 <q-dialog v-model="advissor">
@@ -68,46 +55,64 @@ const advissor = ref(false);
 </template>
 
 <style scoped lang="scss">
-.individual-container {
-    width: 70%;
+.hero-img-big {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -100;
 }
 .services-container {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.individual-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.individual-container img {
+    max-width: 60%;
+    border-radius: 8px;
 }
 .services-buttom {
-    width: 50%;
+    width: 60%;
     color: white;
     padding: 8px;
     background-color: rgba($color: #fb851b, $alpha: 0.8);
     border-radius: 8px;
-    font-size: 20px;
-    animation-duration: 1s;
+    font-size: 16px;
+    animation-duration: 2s;
     animation-name: slidein;
 }
 
 @keyframes slidein {
     from {
-        margin-left: 3%;
+        margin-top: 10%;
     }
     to {
-        margin-left: 0%;
+        margin-top: 0%;
     }
 }
 
 @media screen and (max-width: 720px) {
-    .hero-img-big {
-        display: none;
+    .services-container {
+        flex-direction: column;
     }
-    .hero-img-small {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: fixed;
-        z-index: -1;
+    .individual-container {
+        margin: 1em 0;
+    }
+    .individual-container img {
+        max-width: 70%;
     }
     .services-buttom {
-        width: 80%;
+        width: 70%;
     }
 }
 </style>

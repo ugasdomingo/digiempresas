@@ -4,11 +4,16 @@ import AdsProPaypalComponent from '../payments/AdsProPaypalComponent.vue';
 
 <template>
     <q-page class="column neoteric text-white justify-evenly">
+        <img src="images/fondo-7.jpg" alt="Hero" class="hero-img-big" />
         <h3 class="q-pb-md q-my-none text-center">Próximas formaciones:</h3>
         <div class="row items-center justify-evenly web-container">
-            <h5 class="q-pb-md q-mb-none">Marzo:</h5>
+            <h5 class="q-pb-md q-mb-none">Junio:</h5>
             <router-link to="ads-profesional">
-                <img src="images/ads-portada.png" alt="course1" />
+                <img
+                    src="images/ads-portada.png"
+                    alt="course1"
+                    class="course-cover"
+                />
             </router-link>
             <div class="column">
                 <AdsProPaypalComponent />
@@ -23,7 +28,16 @@ import AdsProPaypalComponent from '../payments/AdsProPaypalComponent.vue';
 </template>
 
 <style lang="scss" scoped>
-img {
+.hero-img-big {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+.course-cover {
     max-width: 240px;
     object-fit: cover;
     margin: 8px;
