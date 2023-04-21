@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import InicioPageComponent from 'components/pages/InicioPageComponent.vue';
+import InicioPageComponent from 'components/pagesComponents/InicioPageComponent.vue';
 </script>

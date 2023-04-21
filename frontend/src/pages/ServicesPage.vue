@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import ServicesPageComponent from 'src/components/pages/ServicesPageComponent.vue';
+import ServicesPageComponent from 'components/pagesComponents/ServicesPageComponent.vue';
 </script>

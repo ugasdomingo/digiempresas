@@ -10,7 +10,7 @@ const routes: RouteRecordRaw[] = [
       { path: 'portafolio', component: () => import('pages/PortfolioPage.vue') },
       { path: 'cursos', component: () => import('pages/CoursesPage.vue') },
       /* PAGINAS DE CURSOS */
-      { path: 'ads-profesional', component: () => import('components/courses/AdsProCourseComponent.vue') },
+      { path: 'ads-profesional', component: () => import('pages/AdsProCoursePage.vue') },
     ],
   },
 

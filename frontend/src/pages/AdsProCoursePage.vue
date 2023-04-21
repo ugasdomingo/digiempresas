@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AdsProPaypalComponent from '../payments/AdsProPaypalComponent.vue';
+import AdsProPaypalComponent from 'components/paymentsComponents/AdsProPaypalComponent.vue';
 </script>
 
 <template>

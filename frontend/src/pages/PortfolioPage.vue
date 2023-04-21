@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import PortfolioPageComponent from 'src/components/pages/PortfolioPageComponent.vue';
+import PortfolioPageComponent from 'components/pagesComponents/PortfolioPageComponent.vue';
 </script>

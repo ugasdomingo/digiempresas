@@ -2,18 +2,21 @@
 body {
   background-image: url('images/fondo-5.jpg');
   background-size: cover;
+  font-family: 'nunito';
 }
 
 @font-face {
     font-family: neoteric;
     src: url(/fonts/NEOTERIC.ttf);
-  }
+}
+@font-face {
+    font-family: nunito;
+    src: url(/fonts/Nunito-Regular.ttf);
+}
   
-  // declare a class which applies it
-  .neoteric {
-    font-family: 'neoteric';
-  }
-
+.neoteric {
+  font-family: 'neoteric';
+}
 .gradiant {
     background: linear-gradient(to top, #1583ba, #233b98);
 }

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import MarketingComponent from '../services/MarketingComponent.vue';
-import WebsComponent from '../services/WebsComponent.vue';
-import AdvissorComponent from '../services/AdvissorComponent.vue';
+import MarketingComponent from 'components/servicesComponents/MarketingComponent.vue';
+import WebsComponent from 'components/servicesComponents/WebsComponent.vue';
+import AdsComponent from 'components/servicesComponents/AdsComponent.vue';
 
 const marketing = ref(false);
 const webs = ref(false);
@@ -47,7 +47,7 @@ const advissor = ref(false);
                 @click="advissor = !advissor"
             >
                 <q-dialog v-model="advissor">
-                    <AdvissorComponent />
+                    <AdsComponent />
                 </q-dialog>
             </q-btn>
         </div>
