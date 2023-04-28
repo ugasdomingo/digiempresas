@@ -7,7 +7,7 @@ const EnrollmentSchema = new Schema({
 		type: Date,
 		default: Date.now(),
 	},
-    formationID: {
+    formationName: {
 		type: String,
 		required: true,
 	},
@@ -17,7 +17,6 @@ const EnrollmentSchema = new Schema({
 	},
     payed: {
 		type: Boolean,
-		required: true,
 		default: false,
 	},
     paymentMethod: {

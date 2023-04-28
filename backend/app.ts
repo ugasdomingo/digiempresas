@@ -9,6 +9,7 @@ import authRouter from "./src/routes/authRouter";
 import blogRouter from "./src/routes/blogRouter";
 import servicesRouter from "./src/routes/servicesRouter";
 import salesRouter from "./src/routes/salesRouter";
+import enrollmentsRouter from "./src/routes/enrollmentsRouter"
 
 //Define app
 const app = express();
@@ -42,6 +43,7 @@ app.use("/api", authRouter);
 app.use("/api/blog", blogRouter);
 app.use("/api/services", servicesRouter);
 app.use("/api/sales", salesRouter);
+app.use("/api/enrollments", enrollmentsRouter);
 
 //Export app
 export default app;
