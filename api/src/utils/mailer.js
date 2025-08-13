@@ -30,3 +30,10 @@ export const send_test_result = async (user_name, user_email, html) => {
     const subject = `Hola ${user_name}, te envío el resultado de el test.`;
     await send_email(user_email, subject, html);
 }
+
+//Send six digits code
+export const send_six_digits_code = async (user_name, user_email, code) => {
+    const subject = `Hola ${user_name}, código para resetear tu contraseña.`;
+    const html = `<p>El código de verificación es: ${code}</p>`;
+    await send_email(user_email, subject, html);
+}

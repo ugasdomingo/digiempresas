@@ -23,6 +23,9 @@ const userSchema = new Schema({
         enum: ['user', 'Admin'],
         default: 'user'
     },
+    login_token: {
+        type: String,
+    },
     politiquesAccepted: {
         type: Boolean,
         required: true
